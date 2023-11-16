@@ -2,3 +2,15 @@ import random
 import logging
 
 logging.basicConfig(filename='log', level=logging.INFO)
+
+def vhod():
+
+    while True:
+        try:
+            N = int(input("Введите количество бочонков (натуральное число): "))
+            if N > 0:
+                return N
+            else:
+                print("Пожалуйста, введите натуральное число.")
+        except ValueError:
+            print("Пожалуйста, введите целое число.")
