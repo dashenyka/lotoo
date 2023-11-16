@@ -14,3 +14,22 @@ def vhod():
                 print("Пожалуйста, введите натуральное число.")
         except ValueError:
             print("Пожалуйста, введите целое число.")
+
+
+def main():
+    N = vhod()
+    logging.info(f"Введено количество бочонков: {N}")
+
+    numbers = list(range(1, N + 1))
+    random.shuffle(numbers)
+    logging.info(f"Перемешанный список бочонков: {numbers}")
+
+    while numbers:
+        input("Нажмите Enter, чтобы вытащить очередной бочонок: ")
+        pullednumber = numbers.pop(0)
+        print(pullednumber)
+        logging.info(f"Вытащен бочонок: {pullednumber}")
+
+
+if __name__ == "__main__":
+    main()
