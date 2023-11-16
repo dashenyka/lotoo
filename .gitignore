@@ -1,5 +1,4 @@
-# Object file
-*.o
+import random
+import logging
 
-# Ada Library Information
-*.ali
+logging.basicConfig(filename='log', level=logging.INFO)
